@@ -69,6 +69,8 @@ Build-Depends:
  libc-ares-dev,
  libva-dev,
  libevdev-dev,
+ libstdc++-13-dev,
+ python3-setuptools,
 
 Package: electron-27
 Architecture: any

@@ -45,6 +45,7 @@ system/opus.patch
 system/eu-strip.patch
 system/rapidjson.patch
 system/rollup.patch
+system/python312.patch
 
 # i386 support
 i386/support-i386.patch
@@ -64,5 +65,6 @@ riscv64/libgav1.patch
 riscv64/sandbox.patch
 riscv64/v8.patch
 riscv64/ffmpeg.patch
+riscv64/HACK-devtools-remove-terser.patch
 
 gn-remove-unused.patch

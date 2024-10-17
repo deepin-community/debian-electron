@@ -99,7 +99,7 @@ override_dh_auto_configure:
 	ln -sf /usr/bin/node src/third_party/node/linux/node-linux-x64/bin
 
 	mkdir -p src/third_party/jdk
-	ln -s /usr/lib/jvm/java-11-openjdk-$(shell dpkg-architecture -q DEB_HOST_ARCH) \
+	ln -sf /usr/lib/jvm/java-11-openjdk-$(shell dpkg-architecture -q DEB_HOST_ARCH) \
 		src/third_party/jdk/current
 
 	cd src && ../debian/scripts/unbundle.py

@@ -1,0 +1,58 @@
+--- a/src/mojo/public/tools/mojom/mojom/fileutil.py
++++ b/src/mojo/public/tools/mojom/mojom/fileutil.py
+@@ -3,7 +3,6 @@
+ # found in the LICENSE file.
+ 
+ import errno
+-import imp
+ import os.path
+ import sys
+
+--- a/src/mojo/public/tools/mojom/mojom/parse/lexer.py
++++ b/src/mojo/public/tools/mojom/mojom/parse/lexer.py
+@@ -2,7 +2,6 @@
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+ 
+-import imp
+ import os.path
+ import sys
+ 
+--- a/src/components/resources/protobufs/binary_proto_generator.py
++++ b/src/components/resources/protobufs/binary_proto_generator.py
+@@ -9,7 +9,6 @@
+ """
+ from __future__ import print_function
+ import abc
+-import imp
+ import optparse
+ import os
+ import re
+@@ -17,6 +17,18 @@
+ import sys
+ import traceback
+ 
++import importlib.util
++import importlib.machinery
++
++def load_source(modname, filename):
++    loader = importlib.machinery.SourceFileLoader(modname, filename)
++    spec = importlib.util.spec_from_file_location(modname, filename, loader=loader)
++    module = importlib.util.module_from_spec(spec)
++    # The module is always executed and not cached in sys.modules.
++    # Uncomment the following line to cache the module.
++    # sys.modules[module.__name__] = module
++    loader.exec_module(module)
++    return module
+ 
+ class GoogleProtobufModuleImporter:
+   """A custom module importer for importing google.protobuf.
+@@ -68,7 +80,7 @@
+       raise ImportError(fullname)
+ 
+     filepath = self._fullname_to_filepath(fullname)
+-    return imp.load_source(fullname, filepath)
++    return load_source(fullname, filepath)
+ 
+ class BinaryProtoGenerator:
+ 

@@ -37,6 +37,7 @@ system/opus.patch
 system/eu-strip.patch
 system/rapidjson.patch
 system/rollup.patch
+system/python312.patch
 
 bookworm/clang-attribs.patch
 bookworm/typename.patch
@@ -148,3 +149,4 @@ riscv64/sandbox.patch
 riscv64/ffmpeg-scripts.patch
 riscv64/ffmpeg-config.patch
 riscv64/ffmpeg-disable-rvb-rvv.patch
+riscv64/HACK-devtools-remove-terser.patch

@@ -68,6 +68,7 @@ Build-Depends:
  libc-ares-dev,
  libva-dev,
  libevdev-dev,
+ libstdc++-13-dev,
 
 Package: electron-25
 Architecture: any

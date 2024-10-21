@@ -1,0 +1,22 @@
+--- electron-23-23.3.11/src/third_party/devtools-frontend/src/scripts/build/rollup.config.js	2024-10-23 10:29:56.000000000 +0800
++++ electron-23-23.3.11-new/src/third_party/devtools-frontend/src/scripts/build/rollup.config.js	2024-10-23 16:15:36.992512700 +0800
+@@ -6,7 +6,6 @@
+ 
+ import {defaultStrategy} from 'minify-html-literals/src/strategy';  // eslint-disable-line rulesdir/es_modules_import
+ import minifyHTML from 'rollup-plugin-minify-html-template-literals';
+-import {terser} from 'rollup-plugin-terser';
+ 
+ const devtools_plugin = require('./devtools_plugin.js');
+ 
+@@ -52,11 +51,6 @@
+         },
+       },
+     }),
+-    terser({
+-      compress: {
+-        pure_funcs: commandLineArgs.configDCHECK ? ['Platform.DCHECK'] : [],
+-      },
+-    }),
+     {
+       name: 'devtools-plugin',
+       resolveId(source, importer) {

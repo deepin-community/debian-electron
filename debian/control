@@ -67,6 +67,8 @@ Build-Depends:
  libnghttp2-dev,
  libc-ares-dev,
  libva-dev,
+ python3-six,
+ python3-setuptools,
 
 Package: electron-23
 Architecture: any

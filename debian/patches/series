@@ -40,6 +40,7 @@ system/clang-format.patch
 system/opus.patch
 system/eu-strip.patch
 system/rapidjson.patch
+system/python312.patch
 
 lld-17.patch
 
@@ -142,3 +143,4 @@ riscv64/ffmpeg-disable-rvb-rvv.patch
 riscv64/extensions.patch
 riscv64/electron-runtime-api-delegate.patch
 riscv64/electron-patch-2c8a019f39d2-fix.patch
+riscv64/HACK-devtools-remove-terser.patch

@@ -101,6 +101,8 @@ Build-Depends:
  libc-ares-dev,
  libnghttp2-dev,
  libnotify-dev,
+ libstdc++-13-dev,
+ python3-setuptools,
 
 Package: electron-29
 Architecture: any

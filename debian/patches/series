@@ -53,6 +53,7 @@ bookworm/constexpr-equality.patch
 bookworm/nvt.patch
 bookworm/nvt2.patch
 bookworm/undo-internal-alloc.patch
+bookworm/libxml-parseerr.patch
 
 # Ungoogled Chromium
 ungoogled/disable-privacy-sandbox.patch

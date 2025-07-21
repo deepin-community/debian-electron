@@ -68,6 +68,7 @@ riscv64/sandbox.patch
 riscv64/HACK-devtools-remove-terser.patch
 riscv64/rust-target.patch
 riscv64/rust-linking.patch
+riscv64/use-RDTIME-instead-of-RDCYCLE-on-RISC-V.patch
 gn-remove-unused.patch
 
 electron/std-vector-non-const.patch

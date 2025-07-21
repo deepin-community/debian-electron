@@ -1,3 +1,9 @@
+electron-29 (29.4.2-1deepin1) unstable; urgency=medium
+
+  * CycleClock: use RDTIME instead of RDCYCLE on RISC-V (#1727)
+
+ -- Chang Yang <yangchang@deepin.org>  Mon, 21 Jul 2025 13:18:31 +0800
+
 electron-29 (29.4.2-1) UNRELEASED; urgency=medium
 
   * Initial release.
